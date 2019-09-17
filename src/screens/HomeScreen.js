@@ -7,7 +7,7 @@ export default class HomeScreen extends Component {
       textAlign:"center", 
       flex:1 
   },
-    title: 'Home',
+    title: 'Home'
   };
   render() {
     const { navigate } = this.props.navigation;
