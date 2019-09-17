@@ -1,10 +1,16 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View,Button} from 'react-native';
+import {StyleSheet, Text, View,Button,TouchableOpacity} from 'react-native';
 
 export default class HomeScreen extends Component {
   static navigationOptions=({navigation})=>{
       return {
-        title:navigation.getParam('title','Detail')
+        title:navigation.getParam('title','Detail'),
+        headerRight:(
+          <TouchableOpacity style={{marginRight:10}} onPress={()=>alert('button right')}  ><Text>Right</Text></TouchableOpacity>
+        ),
+        headerLeft:(
+          <TouchableOpacity style={{marginLeft:10}} onPress={()=>alert('button right')}  ><Text>Left</Text></TouchableOpacity>
+        )
       }
   };
 	render() {
