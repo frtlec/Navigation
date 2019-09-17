@@ -17,19 +17,22 @@ class TitleLogo extends Component{
   }
 }
 export default class HomeScreen extends Component {
-  static navigationOptions={
-    headerTitleStyle: { 
-      textAlign:"center", 
-      flex:1 
-  },
-    headerTitle:<TitleLogo />,
-    headerRight:(
-      <TouchableOpacity style={{marginRight:10}} onPress={()=>alert('button right')}  ><Text>Right</Text></TouchableOpacity>
-    ),
-    headerLeft:(
-      <TouchableOpacity style={{marginLeft:10}} onPress={()=>alert('button right')}  ><Text>Left</Text></TouchableOpacity>
-    )
-  };
+  static navigationOptions=({navigation})=>{
+    return{
+      headerTitleStyle: { 
+        textAlign:"center", 
+        flex:1 
+    },
+      headerTitle:<TitleLogo />,
+      headerRight:(
+        <TouchableOpacity 
+        style={{marginRight:10}} 
+        onPress={()=>navigation.navigate('Modal')}
+        ><Text>About</Text>
+        </TouchableOpacity>
+      )
+    };
+  }
   render() {
     const { navigate } = this.props.navigation;
     return (
