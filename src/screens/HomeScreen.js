@@ -1,13 +1,28 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
+import { StyleSheet, Text, View, Button,Image } from "react-native";
 
+class TitleLogo extends Component{
+  render(){
+    return(
+      <View style={{  flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'}}>
+
+         <Image
+       style={{width:38, height:38}}
+      source={require('../assets/header-icon.png') } />
+      </View>
+  
+    )
+  }
+}
 export default class HomeScreen extends Component {
   static navigationOptions={
     headerTitleStyle: { 
       textAlign:"center", 
       flex:1 
   },
-    title: 'Home'
+    headerTitle:<TitleLogo />
   };
   render() {
     const { navigate } = this.props.navigation;

@@ -19,6 +19,7 @@ const AppNavigator = createStackNavigator({
   Detail:DetailScreen
 },{
   initialRouteName:'Home',
+  headerLayoutPreset:'center',
   defaultNavigationOptions:{
       headerBackTitle:null,
       headerStyle:{
