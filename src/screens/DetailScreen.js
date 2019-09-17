@@ -2,6 +2,11 @@ import React, {Component} from 'react';
 import {StyleSheet, Text, View,Button} from 'react-native';
 
 export default class HomeScreen extends Component {
+  static navigationOptions=({navigation})=>{
+      return {
+        title:navigation.getParam('title','Detail')
+      }
+  };
 	render() {
     const {navigate,push,goBack,getParam}=this.props.navigation;
     const title=getParam('title','Default Title');
