@@ -6,10 +6,7 @@ export default class HomeScreen extends Component {
       return {
         title:navigation.getParam('title','Detail'),
         headerRight:(
-          <TouchableOpacity style={{marginRight:10}} onPress={()=>alert('button right')}  ><Text>Right</Text></TouchableOpacity>
-        ),
-        headerLeft:(
-          <TouchableOpacity style={{marginLeft:10}} onPress={()=>alert('button right')}  ><Text>Left</Text></TouchableOpacity>
+          <TouchableOpacity style={{marginRight:10}} onPress={()=>{navigation.goBack()}}  ><Text>Right</Text></TouchableOpacity>
         )
       }
   };
